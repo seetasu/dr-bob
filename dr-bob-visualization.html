@@ -1,0 +1,823 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="author" content="www.sulezhi.com">
+
+	<title>
+		Dr-BOB Visualization
+	</title>
+<!-- self-defined css and js -->
+	<link rel="stylesheet" href="dr-bob/main.css">
+	<link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
+
+<!-- js of jQuery -->
+	<script src="dr-bob/jquery-3.1.0.min.js"></script>
+
+<!-- js of jQuery-UI, accordion widget -->
+	<script src="dr-bob/jquery-ui.js"></script>
+
+<!-- sly的css和js -->
+	<script src="dr-bob/jsScroll/plugins.js"></script>
+	<script src="dr-bob/jsScroll/sly.min.js"></script>
+	<script src="dr-bob/jsScroll/vertical.js"></script>
+
+<!-- js and css of hover-box, Tooltipster -->
+	<script src="dr-bob/tooltipster/tooltipster.bundle.min.js"></script>
+	<link rel="stylesheet" href="dr-bob/tooltipster/tooltipster.bundle.min.css">
+	<link rel="stylesheet" href="dr-bob/tooltipster/tooltipster-sideTip-noir.min.css">
+	
+</head>
+<body>
+	<div class="container">
+		<!-- sidebar starts  -->
+		<div class="sidebar-wrap">
+			<div class="sidebar">
+
+				<!-- sidebar head starts, the part with the logo and Dr-BOB name -->
+				<div class="sidebar-head">
+					<a href="http://www.dr-bob.eu/" target="_blank">
+						<img class="logo" src="dr-bob/image/DRBOB-logo.png">
+						<div class="project-name">
+							<img src="dr-bob/image/project-name.png">
+						</div>
+					</a>
+				</div>
+				<!-- sidebar head ends -->
+				
+				<!-- sidebar menu starts, includes Introducton, Informaton Flow, Control Panel, three clickable and foldable menu-titles -->
+				<div class="sidebar-menu">
+					<!-- menu introduction starts -->
+					<div class="menu-title" id="intro">
+						<span>Interaction Manual</span>
+					</div>
+					<div class="nav-box">
+						<table class="intro-content">
+							<tr class="intro-content-hover">
+								<td class="icon">
+									<img src="dr-bob/image/icon-hover.gif">
+								</td>
+								<td class="guide">
+									<p>
+										<span>Applied for</span>
+										</br>
+										<span>all pages</span>
+									</p>
+								</td>
+							</tr>
+							<tr class="intro-content-info">
+								<td class="icon">
+									<img src="dr-bob/image/icon-info.gif">
+								</td>
+								<td class="guide" cursor="pointer">
+									<p>
+										<span>Applied for</span>
+										</br>
+										<span class="menu-inside-intro-info">Information Flow page</span>
+									</p>
+								</td>
+							</tr>
+							<tr class="intro-content-control">
+								<td class="icon">
+									<img src="dr-bob/image/icon-control.gif">
+								</td>
+								<td class="guide" cursor="pointer">
+									<p>
+										<span>Applied for</span>
+										</br>
+										<span class="menu-inside-intro-control">Control Panel page</span>
+									</p>
+								</td>
+							</tr>
+						</table>
+						<img class="shadow" src="dr-bob/image/shadow.png">
+					</div>
+					<!-- menu introduction ends -->			
+
+					<!-- menu Information Flow starts -->
+					<div class="menu-title" id="info">
+						<span>Infomation Flow</span>
+					</div>
+					<div class="menu-content-wrap">
+						<p id="menu-note">
+							Click on numbers or sroll the mouse in the text area for more elaboration for each lines.
+						</p>
+						<div class="scroll nav-box">
+							<div class="wrap">
+								<div class="controls center">
+									<button class="btn prev">
+										<img src="dr-bob/image/arrow-up.png">
+									</button>
+								</div>
+
+								<div class="frame smart" id="smart">
+									<ul class="items">
+										<li>
+											<p class="number">
+												1						</p>
+											<p class="direction">
+												Weather → DRMS
+											</p>
+											<p class="content">
+												Weather forecast data (e.g. wind speed, solar, class (e.g. sunny, raining, snowing), date, time period, temperature).
+											</p>
+										</li>
+										<li>
+											<p class="number">
+												2						</p>
+											<p class="direction">
+												Economic Incentives → DRMS
+											</p>
+											<p class="content">
+												DR request/event (e.g. scheme, start date, duration, power requirements); request to opt in/out; energy prices. 
+											</p><p class="direction">
+												DRMS → Economic Incentives
+											</p>
+											<p class="content">
+												Participation response (opt in/out); 
+											</p>
+										</li>
+
+										<li>
+											<p class="number">
+												3						</p>
+											<p class="direction">
+												Grid → DRMS
+											</p>
+											<p class="direction">
+												DRMS → Grid
+											</p>
+										</li>
+										<li>
+											<p class="number">
+												4						</p>
+											<p class="direction">
+												DRMS → Consumer Portal
+											</p>
+											<p class="content">
+											</p>
+											<p class="direction">
+												Consumer Portal → DRMS
+											</p>
+											<p class="content">
+											</p>
+										</li>
+
+										<li>
+											<p class="number">
+												5						
+											</p>
+											<p class="direction">
+												DRMS → Aggregator
+											</p>
+											<p class="direction">
+												Aggregator → DRMS
+											</p>
+										</li>
+
+										<li>
+											<p class="number">
+												6						</p>
+											<p class="direction">
+												DRMS → Building Manager
+											</p>
+											<p class="content">
+											</p>
+											<p class="direction">
+												Building Manager → DRMS
+											</p>
+											<p class="content">
+											</p>
+										</li>
+
+										<li>
+											<p class="number">
+												7						
+											</p>
+											<p class="direction">
+												Building Manager → BMS
+											</p>
+											<p class="content">
+											</p>
+											<p class="direction">
+												BMS → Building Manager
+											</p>
+											<p class="content">
+											</p>
+										</li>
+
+										<li>
+											<p class="number">
+												8						
+											</p>
+											<p class="direction">
+												DRMS → LEM
+											</p>
+											<p class="content">
+												Availability updates; local strategy (e.g. available assets); energy data;  
+											</p>
+											<p class="direction">
+												LEM → DRMS
+											</p>
+											<p class="content">
+												Input data for prediction and optimization (e.g. weather, energy prices)
+											</p>
+										</li>
+
+										<li>
+											<p class="number">
+												9						</p>
+											<p class="direction">
+												Consumer Portal → Building Manager
+											</p>
+											<p class="content">
+												Upcoming DR events and expected consequences; results of past DR events (e.g. successes, participations); real-time and historical consumption & production data; energy prices; weather forecasts. 
+											</p>
+											<p class="direction">
+												uilding Manager → Consumer Portal
+											</p>
+											<p class="content">
+												Option to opt in/out for upcoming DR-events; define which buildings take part in DR-events; 
+											</p>
+										</li>
+
+										<li>
+											<p class="number">
+												10						</p>
+											<p class="direction">
+												Building Manager → Owner
+											</p>
+											<p class="content">
+											</p>
+											<p class="direction">
+												Owner → Building Manager
+											</p>
+											<p class="content">
+											</p>
+										</li>
+
+										<li>
+											<p class="number">
+												11						</p>
+											<p class="direction">
+												Consumer Portal → Occupants
+											</p>
+											<p class="content">
+												Upcoming DR events and expected consequences; feedback past DR events / energy efficiency efforts; energy information; calls for action for energy efficiency efforts; additional information (e.g. weather forecast, train schedules, local news).
+											</p>
+											<p class="direction">
+												Occupants → Consumer Portal
+											</p>
+											<p class="content">
+												Possibility to give feedback to- or communicate with building manager regarding DR-related collective decisions.
+											</p>
+										</li>
+
+										<li>
+											<p class="number">
+												12						</p>
+											<p class="direction">
+												LEM → Maintenance
+											</p>
+											<p class="content">
+											</p>
+										</li>
+										<li>
+											<p class="number">
+												13					
+											</p>
+											<p class="direction">
+												BMS → LEM
+											</p>
+											<p class="content">
+												Local input data for prediction and optimization (energy demand data from smart meters; status and measurements from generation and storage equipment)
+											</p>
+											<p class="direction">
+												LEM → BMS
+											</p>
+											<p class="content">
+												Asset forecast; real time data (regarding e.g. metering, buildings, assets); 
+											</p>
+										</li>
+										<li>
+											<p class="number">
+												14					
+											</p>
+											<p class="direction">
+												BMS → BoB
+											</p>
+											<p class="content">
+												(e.g. turn on/off, change settings of) local assets and devices; 
+											</p>
+											<p class="direction">
+												BoB → BMS
+											</p>
+											<p class="content">
+												Metering data
+											</p>
+										</li>
+
+										<li>
+											<p class="number">
+												15					
+											</p>
+											<p class="direction">
+												DRMS → TSO/DSO
+											</p>
+											<p class="content">
+											</p>
+											<p class="direction">
+												TSO/DSO → DRMS
+											</p>
+											<p class="content">
+											</p>
+										</li>
+									</ul>
+								</div>
+
+								<div class="controls center">
+									<button class="btn next">
+										<img src="dr-bob/image/arrow-down.png">
+									</button>
+								</div>
+							</div>
+							<img class="shadow" src="dr-bob/image/shadow.png">
+						</div>
+					</div>
+					<!-- menu Information Flow ends -->
+
+					
+					<!-- menu Control Panel starts -->
+					<div class="menu-title" id="control">
+						<span>Control Panel</span>
+					</div>
+					<div class="menu-content-wrap">
+						<p id="menu-note">
+							Click to highlight certain elements
+						</p>
+						<div class="nav-box">
+							<div class="stakeholder levelBox">
+								<div class="level-name">
+									- Stakeholder Level -
+								</div>
+								<div class="panel-btn" onclick="currentSlide(1)">
+									<span class="dot">DSO/TSO/Retailer</span>
+								</div>
+								<div class="panel-btn" onclick="currentSlide(2)">
+									<span class="dot">Aggregator</span>
+								</div>
+								<div class="panel-btn" onclick="currentSlide(3)">
+									<span class="dot">Maintenance</span>
+								</div>
+								<div class="panel-btn" onclick="currentSlide(4)">
+									<span class="dot">Building Manager</span>
+								</div>
+								<div class="panel-btn" onclick="currentSlide(5)">
+									<span class="dot">Owner</span>
+								</div>
+								<div class="panel-btn" onclick="currentSlide(6)">
+									<span class="dot">Occupants</span>
+								</div>
+							</div>
+
+							<div class="virtual levelBox">
+								<div class="level-name">
+									- Virtual Level -
+								</div>
+								<div class="panel-btn" onclick="currentSlide(7)">
+									<span class="dot">Weather System</span>
+								</div>
+								<div class="panel-btn" onclick="currentSlide(8)">
+									<span class="dot">DRMS</span>
+								</div>
+								<div class="panel-btn" onclick="currentSlide(9)">
+									<span class="dot">LEM</span>
+								</div>
+								<div class="panel-btn" onclick="currentSlide(10)">
+									<span class="dot">BMS</span>
+								</div>
+								<div class="panel-btn" onclick="currentSlide(11)">
+									<span class="dot">Consumer Portal</span>
+								</div>
+							</div>
+
+							<div class="ground levelBox">
+								<div class="level-name">
+									- Ground Level -
+								</div>
+								<div class="panel-btn" onclick="currentSlide(12)">
+									<span class="dot">Grid</span>
+								</div>
+								<div class="panel-btn" onclick="currentSlide(13)">
+									<span class="dot">Economic Incentives</span>
+								</div>
+								<div class="panel-btn" onclick="currentSlide(14)">
+									<span class="dot">Targeted BoB</span>
+								</div>
+							</div>
+							<img class="shadow" src="dr-bob/image/shadow.png">
+						</div>
+					</div>
+					<!-- menu Control Panel ends -->	
+				</div>
+				<!-- sidebar menu ends -->							
+			
+				<!-- sidebar footer starts -->
+				<div class="sidebar-footer">
+					<p>Duneworks&copy <a href="http://www.duneworks.nl/disclaimer-en/" target="_blank" style="color: #09f; text-decoration:none; margin-left: 10px;">Disclaimer</a></p>
+				</div>
+				<!-- sidebar footer ends -->							
+			</div>
+			<!-- sidebar ends -->							
+		</div>
+		<!-- sidebar starts  -->
+
+		<!-- visualization starts-->
+		<div class="visualization">
+			<!-- Introduction page visualizaiton starts -->
+			<div class="intro-wrap">
+				<div class="intro-bg">
+					<ul class="moving-pic hidden">
+						<li>
+							<img src="dr-bob/image/introduction-1.png">
+						</li>
+						<li>
+							<img src="dr-bob/image/introduction-2.png">
+						</li>
+						<li>
+							<img src="dr-bob/image/introduction-3.png">	
+						</li>
+						<li>
+							<img src="dr-bob/image/introduction-4.png">
+						</li>
+						<li>
+							<img src="dr-bob/image/introduction-line.png" class="intro-line">
+						</li>
+					</ul>
+					<img src="dr-bob/image/introduction-integrated.png" class="intro-integrated-img">
+					<div class="introduction-content">
+						<p>
+							We invite you to explore the Demand Response concept of the Dr BoB project (<a href="https://vimeo.com/176786849" style="color:#09f; text-decoration:none;" target="_blank">project video</a>). </br>
+							This visualization clarifies the main elements and flows of the Demand Response concept of the Dr BoB project,
+							</br>distinguishing four levels (which are interwoven in practice): </br>
+							<b>the Stakeholder Level</b>, <b>the Virtual Level</b> (technologies and ICT), </br>
+							<b>the Ground Level</b> (physical elements and market) <b>the Enablers Level</b> (policy and regulation)
+						</p>
+						<p>
+							Click <span class="expand">here</span> to expand the picture about and know more about the four layers.
+						</p>
+					</div>
+				</div>
+			</div>
+			<!-- Introduction visualizaiton ends -->
+
+			<!-- Information Flow visualization starts -->
+			<div class="info-wrap">
+				<div class="info-bg">
+					<ul class="pages">
+						<li>1</li>
+						<li>2</li>
+						<li>3</li>
+						<li>4</li>
+						<li>5</li>
+						<li>6</li>
+						<li>7</li>
+						<li>8</li>
+						<li>9</li>
+						<li>10</li>
+						<li>11</li>
+						<li>12</li>
+						<li>#</li>
+					</ul>
+					<img src="dr-bob/image/info-bg.png" class="info-bg-img">
+				</div>	
+			</div>
+			<!-- Information Flow visualization ends -->
+
+			<!-- Control Panel visualization starts -->
+			<div class="panel-wrap">
+				<div class="panel-bg">
+					<div class="mySlides">
+						<img src="dr-bob/image/01-dso.png">
+					</div>
+
+					<div class="mySlides">
+						<img src="dr-bob/image/02-aggregator.png">
+					</div>
+
+					<div class="mySlides">
+						<img src="dr-bob/image/03-maintenance.png">
+					</div>
+
+					<div class="mySlides">
+						<img src="dr-bob/image/04-manager.png">
+					</div>
+
+					<div class="mySlides">
+						<img src="dr-bob/image/05-owner.png">
+					</div>
+
+					<div class="mySlides">
+						<img src="dr-bob/image/06-occupants.png">
+					</div>
+
+					<div class="mySlides">
+						<img src="dr-bob/image/07-weather.png">
+					</div>
+
+					<div class="mySlides">
+						<img src="dr-bob/image/08-drms.png">
+					</div>
+
+					<div class="mySlides">
+						<img src="dr-bob/image/09-lem.png">
+					</div>
+
+					<div class="mySlides">
+						<img src="dr-bob/image/10-bms.png">
+					</div>
+
+					<div class="mySlides">
+						<img src="dr-bob/image/11-consumer.png">
+					</div>
+
+					<div class="mySlides">
+						<img src="dr-bob/image/12-grid.png">
+					</div>
+
+					<div class="mySlides">
+						<img src="dr-bob/image/13-economic.png">
+					</div>
+
+					<div class="mySlides">
+						<img src="dr-bob/image/14-bob.png">
+					</div>
+				</div>	
+			</div>
+			<!-- Control Panel visualization ends -->
+		</div>
+		<!-- visualization ends-->
+
+		
+		<!-- mouse over box starts -->
+		<div class="hover-box-container">
+			<div class="hover-wrap">
+				<div class="hover-box">
+					<ul class="hover">
+
+						<!-- 1st child  DSO-->
+						<li class="tooltip-left" data-tooltip-content="#dso" onclick="currentSlide(1)">
+							<div class="tooltip_templates dot">
+							    <div id="dso" class="tooltip_content" style="width: 300px;">
+							       	<h2 style="font-size: 16px;">DSO (Distribution System Operator)</h2>
+							       	<p style="font-size: 13px;">
+							       		The Distribution System Operator (DSO) is responsible for the final stage of the electric power delivery to the consumer premises, i.e. the medium- and low-voltage grid, carrying electricity from the TSOs to the consumers. 
+							       	</p>
+							    </div>
+							</div>
+						</li>
+
+						<!-- 2nd child TSO -->
+						<li class="tooltip-left" data-tooltip-content="#tso" onclick="currentSlide(1)">
+							<div class="tooltip_templates dot">
+							    <div id="tso" class="tooltip_content" style="width: 300px;">
+							       	<h2 style="font-size: 16px;">TSO (Transmission System Operator)</h2>
+							       	<p style="font-size: 13px;">
+							       		The Transmission System Operator (TSO) is responsible for the energy grid infrastructures, mainly the high-voltage grid. TSOs need to coordinate the supply and demand for energy, avoiding fluctuations in frequency and supply interruption. 
+							       	</p>
+							    </div>
+							</div>
+						</li>
+
+						<!-- 3rd child Aggregator -->
+						<li class="tooltip-left" data-tooltip-content="#aggregator" onclick="currentSlide(2)">
+							<div class="tooltip_templates dot">
+							    <div id="aggregator" class="tooltip_content" style="width: 300px;">
+							       	<h2 style="font-size: 16px;">Aggregator</h2>
+							       	<p style="font-size: 13px;">
+							       		Aggregators are accountable for purchasing flexibility from prosumers, aggregating it into a portfolio, designing services that rely on the accumulated flexibility, and selling these flexibility services to different markets. 
+							       	</p>
+							    </div>
+							</div>
+						</li>
+
+						<!-- 4th child Owner -->
+						<li class="tooltip-right" data-tooltip-content="#owner" onclick="currentSlide(5)">
+							<div class="tooltip_templates dot">
+							    <div id="owner" class="tooltip_content" style="width: 300px;">
+							       	<h2 style="font-size: 16px;">Owner</h2>
+							       	<p style="font-size: 13px;">
+							       		The owners of the block of buildings make the decision whether or not to invest in demand response measures based upon costs, benefits, etc.
+							       	</p>
+							    </div>
+							</div>
+						</li>
+
+						<!-- 5th child Occupants -->
+						<li class="tooltip-right" data-tooltip-content="#occupants" onclick="currentSlide(6)">
+							<div class="tooltip_templates dot">
+							    <div id="occupants" class="tooltip_content" style="width: 300px;">
+							       	<h2 style="font-size: 16px;">Occupants</h2>
+							       	<p style="font-size: 13px;">
+							       		Main users of the building which are can be very different for different buildings and also within one single building.  
+							       	</p>
+							    </div>
+							</div>
+						</li>
+
+						<!-- 6th child Maintenance -->
+						<li class="tooltip-right" data-tooltip-content="#maintenance" onclick="currentSlide(3)">
+							<div class="tooltip_templates dot">
+							    <div id="maintenance" class="tooltip_content" style="width: 300px;">
+							       	<h2 style="font-size: 16px;">Maintenance</h2>
+							       	<p style="font-size: 13px;">
+							       		Ensuring reliable, efficient and effective running of buildings and their (energy) systems. 
+							       	</p>
+							    </div>
+							</div>
+						</li>
+
+						<!-- 7th child Manager -->
+						<li class="tooltip-right" data-tooltip-content="#manager" onclick="currentSlide(4)">
+							<div class="tooltip_templates dot">
+							    <div id="manager" class="tooltip_content" style="width: 300px;">
+							       	<h2 style="font-size: 16px;">Building Manager</h2>
+							       	<p style="font-size: 13px;">
+							       		Building managers are responsible for the daily management of buildings, e.g. to maintain agreed services and a healthy and comfortable indoor climate.
+							       	</p>
+							    </div>
+							</div>
+						</li>
+
+						<!-- 8th child Weather -->
+						<li class="tooltip-left" data-tooltip-content="#weather" onclick="currentSlide(7)">
+							<div class="tooltip_templates dot">
+							    <div id="weather" class="tooltip_content" style="width: 300px;">
+							       	<h2 style="font-size: 16px;">Weather System</h2>
+							       	<p style="font-size: 13px;">
+							       		Forecasting weather conditions. 
+							       	</p>
+							    </div>
+							</div>
+						</li>
+
+						<!-- 9th child DRMS -->
+						<li class="tooltip-left" data-tooltip-content="#DRMS" onclick="currentSlide(8)">
+							<div class="tooltip_templates dot">
+							    <div id="DRMS" class="tooltip_content" style="width: 300px;">
+							       	<h2 style="font-size: 16px;">Virtual Energy Plant (DRMS)</h2>
+							       	<p style="font-size: 13px;">
+							       		The Virtual Energy Plant (DRMS) provides macro-level optimised energy management to ensure efficient use of aggregated assets. It manages DR requests and contracts for various scenarios.  
+							       	</p>
+							    </div>
+							</div>
+						</li>
+
+						<!-- 10th child Consumer -->
+						<li class="tooltip-right" data-tooltip-content="#consumer" onclick="currentSlide(11)">
+							<div class="tooltip_templates dot">
+							    <div id="consumer" class="tooltip_content" style="width: 300px;">
+							       	<h2 style="font-size: 16px;">Consumer Portal</h2>
+							       	<p style="font-size: 13px;">
+							       		User interfaces for energy management and community engagement. 
+							       	</p>
+							    </div>
+							</div>
+						</li>
+
+						<!-- 11th child Lem -->
+						<li class="tooltip-right" data-tooltip-content="#lem" onclick="currentSlide(9)">
+							<div class="tooltip_templates dot">
+							    <div id="lem" class="tooltip_content" style="width: 300px;">
+							       	<h2 style="font-size: 16px;">Local Energy Manager (LEM)</h2>
+							       	<p style="font-size: 13px;">
+							       		The Local Energy Manager (LEM) provides micro level optimised energy management by integrating local generation and storage assets.
+							       	</p>
+							    </div>
+							</div>
+						</li>
+
+						<!-- 12th child BMS -->
+						<li class="tooltip-right" data-tooltip-content="#bms" onclick="currentSlide(10)">
+							<div class="tooltip_templates dot">
+							    <div id="bms" class="tooltip_content" style="width: 300px;">
+							       	<h2 style="font-size: 16px;">Building Management System (BMS)</h2>
+							       	<p style="font-size: 13px;">
+							       		The Building Management System (BMS) is an IT system installed in buildings to control and monitor the building’s mechanical and electrical equipment such as ventilation, lighting and power systems.  
+							       	</p>
+							    </div>
+							</div>
+						</li>
+
+						<!-- 13th child Power plant -->
+						<li class="tooltip-left" data-tooltip-content="#power">
+							<div class="tooltip_templates dot">
+							    <div id="power" class="tooltip_content" style="width: 300px;">
+							       	<h2 style="font-size: 16px;">Power Plant</h2>
+							       	<p style="font-size: 13px;">
+							       		Generator and supplier of electricity and other sources of energy.  
+							       	</p>
+							    </div>
+							</div>
+						</li>
+
+						<!-- 14th child Economic Incentives-->
+						<li class="tooltip-right" data-tooltip-content="#econimic" onclick="currentSlide(13)">
+							<div class="tooltip_templates dot">
+							    <div id="econimic" class="tooltip_content" style="width: 300px;">
+							       	<h2 style="font-size: 16px;">Economic Incentives</h2>
+							       	<p style="font-size: 13px;">
+							       		Economic incentives for DR that are in place in a market, largely depending on policies and regulations.  
+							       	</p>
+							    </div>
+							</div>
+						</li>
+
+						<!-- 15th child BOB -->
+						<li class="tooltip-right" data-tooltip-content="#target-bob" onclick="currentSlide(14)">
+							<div class="tooltip_templates dot">
+							    <div id="target-bob" class="tooltip_content" style="width: 300px;">
+							       	<h2 style="font-size: 16px;">Targeted Blocks of Buildings (BoB)</h2>
+							       	<p style="font-size: 13px;">
+							       		Block of buildings that together offer flexibility in energy consumption, storage and generation.   
+							       	</p>
+							    </div>
+							</div>
+						</li>
+
+						<!-- 16th child Enabler -->
+						<li class="tooltip-left" data-tooltip-content="#enabler">
+							<div class="tooltip_templates">
+							    <div id="enabler" class="tooltip_content" style="width: 300px;">
+							       	<h2 style="font-size: 16px;">Policies and Regulations</h2>
+							       	<p style="font-size: 13px;">
+							       		Whether or not there is a market with economic incentives for DR (for blocks of buildings) largely depends on the policies and regulations that are in place.    
+							       	</p>
+							    </div>
+							</div>
+						</li>
+
+						<!-- 17th child Grid -->
+						<li class="tooltip-left" data-tooltip-content="#grid" onclick="currentSlide(12)">
+							<div class="tooltip_templates dot">
+							    <div id="grid" class="tooltip_content" style="width: 300px;">
+							       	<h2 style="font-size: 16px;">Grid</h2>
+							       	<p style="font-size: 13px;">
+							       		Interconnected network for delivering energy from suppliers to consumers.   
+							       	</p>
+							    </div>
+							</div>
+						</li>
+
+						<!-- 18th child Grid -->
+						<li class="tooltip-right" data-tooltip-content="#gridd" onclick="currentSlide(12)">
+							<div class="tooltip_templates dot">
+							    <div id="gridd" class="tooltip_content" style="width: 300px;">
+							       	<h2 style="font-size: 16px;">Grid</h2>
+							       	<p style="font-size: 13px;">
+							       		Interconnected network for delivering energy from suppliers to consumers.   
+							       	</p>
+							    </div>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<!-- mouse over box ends -->
+
+		<!-- menu on the right starts -->
+		<div class="menu-right">
+			<ul>
+				<li class="menu-right-intro"></li>
+				<li class="menu-right-info"></li>
+				<li class="menu-right-control"></li>
+			</ul>
+		</div>
+		<!-- menu on the right ends -->
+
+		<!-- starting page reminder starts -->
+		<div class="reminder-wrap">
+			<div class="reminderT">
+				<div class="reminderTC">
+					<div class="reminder">
+						<p>
+							For a better experience,<br>
+							use <b style="color: #ee3643;">"Ctrl"</b> + <b style="color: #ee3643;">"+"</b>/<b style="color: #ee3643;">"-"</b> to zoom in/out the webpage<br>
+							to insure the visualization locates in the center of your view.
+						</p>
+						<p class="get-it"><b>Get it!</b></p>	
+					</div>
+				</div>
+			</div>			
+		</div>
+		<!-- starting page reminder ends -->
+
+	</div>
+
+	<script src="dr-bob/main.js"></script>
+</body>
+</html>
